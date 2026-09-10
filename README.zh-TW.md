@@ -11,6 +11,7 @@
 我的背景結合物流營運、銷售及出貨協調、庫存管理、進出口文件及業務報表。我運用 Power BI、SQL、Excel 和 Python，支援銷售、產品、客戶、發票及庫存分析。
 
 **職涯方向：** BI & Operations Analyst · Operations Analyst · Sales Operations Analyst · Reporting Analyst · Inventory Analyst  
+
 **作品集：** [Notion Portfolio](https://www.notion.so/Chung-Man-Ross-Tang-2cc75a3c84e1807d8e6ec0bad9e0fa84?source=copy_link) · **LinkedIn：** [Chung Man Tang](https://www.linkedin.com/in/chung-man-tang-2a7616177)
 
 ---
