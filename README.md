@@ -11,6 +11,7 @@ I build practical reporting and analytics solutions that help trading, wholesale
 My background combines logistics operations, sales and shipping coordination, inventory control, import/export documentation and business reporting. I use Power BI, SQL, Excel and Python to support sales, product, customer, invoice and inventory analysis.
 
 **Career focus:** BI & Operations Analyst · Operations Analyst · Sales Operations Analyst · Reporting Analyst · Inventory Analyst  
+
 **Portfolio:** [Notion Portfolio](https://www.notion.so/Chung-Man-Ross-Tang-2cc75a3c84e1807d8e6ec0bad9e0fa84?source=copy_link) · **LinkedIn:** [Chung Man Tang](https://www.linkedin.com/in/chung-man-tang-2a7616177)
 
 ---
