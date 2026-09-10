@@ -1,133 +1,150 @@
-[![English](https://img.shields.io/badge/English-Click_Here-blue?style=for-the-badge)](README.md)
+[![English](https://img.shields.io/badge/English-Click_to_View-blue?style=for-the-badge)](README.md)
 &nbsp;&nbsp;
-[![繁體中文](https://img.shields.io/badge/繁體中文-点击查看-blue?style=for-the-badge)](README.zh-TW.md)
+[![繁体中文](https://img.shields.io/badge/繁体中文-点击查看-blue?style=for-the-badge)](README.zh-TW.md)
 
-# 商业智慧作品集 — Ross Tang
+# 邓仲文（Ross Tang）
 
-欢迎，这个 GitHub 整理我在 Power BI、数据分析及营运报表方面的项目。我的背景来自物流营运及中小企商务支持，现正逐步发展 Operations + BI 路线，并把 Power BI、Excel 及 SQL 应用到销售、产品、客户及发票分析之中。
+### BI & Operations｜Power BI、SQL 与报表分析｜贸易及物流背景
 
+我建立实用的报表及数据分析方案，协助贸易、批发及中小企团队将销售、库存和营运数据，转化为更清晰的仪表板、可行的商业洞察和更有效的日常决策。
 
+我的背景结合物流营运、销售及出货协调、库存管理、进出口文件及业务报表。我运用 Power BI、SQL、Excel 和 Python，支持销售、产品、客户、发票及库存分析。
+
+**职涯方向：** BI & Operations Analyst · Operations Analyst · Sales Operations Analyst · Reporting Analyst · Inventory Analyst  
+**作品集：** [Notion Portfolio](https://www.notion.so/Chung-Man-Ross-Tang-2cc75a3c84e1807d8e6ec0bad9e0fa84?source=copy_link) · **LinkedIn：** [Chung Man Tang](https://www.linkedin.com/in/chung-man-tang-2a7616177)
 
 ---
 
 ## 技能与工具
 
-**编程语言与数据查询**
-- SQL（MySQL、PostgreSQL、BigQuery）
-- Python（pandas、openpyxl）
+**业务及营运分析**
+- 销售报表、盈利能力及折扣分析
+- 库存周转、缺货、呆滞库存、ABC 分类及补货规划
+- 客户旅程、转换漏斗及客户终身价值分析
+- 营销绩效分析：CTR、CVR、CPA、ROI 及 ROAS
+- KPI 报表及流程改善
 
-**BI 与可视化**
-- Power BI（DAX、数据建模、交互式仪表板）
+**程序及查询**
+- SQL：MySQL、PostgreSQL、Google BigQuery
+- Python：pandas、openpyxl
 
-**数据工程与建模**
-- dbt（data build tool）— 分层建模（staging / marts）
-- 星型模式 / 雪花模式
-- ETL 流程设计
+**商业智能及可视化**
+- Power BI：DAX、数据模型、交互式仪表板
+- Power Query 及 Excel 报表
 
-**其他工具**
-- Excel（数据透视表、高级公式）
-- Git / GitHub
-- NAS 及 UPS 系统搭建与维护
+**数据工程及数据模型**
+- dbt：staging 及 marts 分层数据模型
+- Star Schema 及 Snowflake Schema
+- ETL／ELT pipeline 设计、分析用 Views 及数据验证
 
+**业务及支持工具**
+- Excel：PivotTables、进阶公式及 Power Query
+- Git／GitHub
+- NAS 及 UPS 设置与维护，支持小型团队的业务持续性
 
 ---
 
-## 作品集项目
+## 精选专案
 
-### 1. 销售与利润分析
+### 1. 销售与盈利能力分析
 **MySQL · Python · Power BI**
 
-使用 Kaggle Superstore 销售数据集（51,000+ 条记录，2011–2014 年，涵盖 7 个全球市场），深入分析产品盈利能力与折扣策略的实际影响。
+分析 Kaggle Superstore Sales Dataset：涵盖 2011 至 2014 年、七个全球市场及超过 51,000 笔纪录，以找出产品盈利能力的关键因素及折扣策略风险。
 
-- 在 MySQL 中建立完整雪花模式数据仓库（staging → 维度表 → 事实表 → 视图）
-- 执行双向数据核对，验证整条 pipeline 的数据完整性
-- 交付 3 页交互式 Power BI 仪表板，涵盖执行摘要 KPI、产品表现及促销影响分析
+- 在 MySQL 建立 Snowflake Schema 数据仓储：staging → 维度表 → 事实表 → 分析用 views
+- 执行双向 reconciliation，验证各数据管线层之间的数据完整性
+- 建立三页交互式 Power BI 仪表板，涵盖管理层 KPI、产品表现及促销影响
+- **主要成果：** 发现 Furniture Tables 子类别即使销售增长仍持续亏损，说明需要建立折扣管控及利润率监察机制
 
 <div align="left">
   <a href="https://github.com/ross-bi/01_Superstore_Sales_Analysis/blob/master/README.zh-CN.md">
-    <img src="https://img.shields.io/badge/查看项目-01_Superstore_Sales_Analysis-blue?style=for-the-badge&logo=github" alt="Superstore Sales Analysis">
+    <img src="https://img.shields.io/badge/View_Project-01_Superstore_Sales_Analysis-blue?style=for-the-badge&logo=github" alt="Superstore Sales Analysis">
   </a>
 </div>
 
 ---
 
 ### 2. 电商客户旅程分析
-**BigQuery · PostgreSQL · dbt · Power BI**
+**BigQuery · PostgreSQL · dbt · Python · Power BI**
 
-使用 Google BigQuery 公开数据集（GA4 Obfuscated Sample E-Commerce，2020 年 11 月，共 30 天数据），进行端对端电商客户旅程分析。
+使用 Google BigQuery Public Data 中的 GA4 Obfuscated Sample E-Commerce Dataset，针对 2020 年 11 月约 274,000 笔 GA4 event records 进行端到端客户旅程分析。
 
-- 从 BigQuery 提取 GA4 原始事件数据并加载至 PostgreSQL
-- 建立 dbt 数据转换流程（staging → marts），包含增量模型、代理键及数据质量测试
-- 建模购物漏斗事实表（`fact_sessions`）及客户终身价值维度表（`dim_customers`）
-- 分析各流量来源、设备及地区的转化率表现
+- 从 BigQuery 提取巢状 GA4 event data，并载入 PostgreSQL
+- 建立 dbt 数据转换 pipeline：staging → marts，包含 incremental models、surrogate keys 及 26 个自动化数据质量测试（`PASS=26`）
+- 建立转换漏斗事实表 `fact_sessions` 及客户终身价值维度表 `dim_customers`
+- 分析不同 traffic source、装置及地区的转换表现
+- **主要成果：** 找出客户在浏览产品前出现明显流失，并发现 referral traffic 的转换率最高，约为 2.2%–2.3%
 
 <div align="left">
   <a href="https://github.com/ross-bi/02_Ecommerce_Customer_Journey/blob/main/README.zh-CN.md">
-    <img src="https://img.shields.io/badge/查看项目-02_Ecommerce_Customer_Journey-blue?style=for-the-badge&logo=github" alt="Ecommerce Customer Journey">
+    <img src="https://img.shields.io/badge/View_Project-02_Ecommerce_Customer_Journey-blue?style=for-the-badge&logo=github" alt="E-Commerce Customer Journey Analytics">
   </a>
 </div>
 
 ---
-### 3. 流量来源与广告 ROI 分析
+
+### 3. 流量来源及广告 ROI 分析
 **Python · Google BigQuery · SQL · Power BI**
 
-以仿真的 2024 年全年数据，分析五大流量渠道（Google Ads、Facebook Ads、Email、自然流量、直接流量）的广告效益与投资回报率（ROI）。
+使用可重现的 2024 全年仿真数据，分析 Google Ads、Facebook Ads、Email、Organic 及 Direct 五个渠道的广告成效及 ROI。
 
-- 使用 Python（pandas、NumPy、Faker）以 `seed=42` 生成可重现的仿真数据
-- 在 BigQuery 执行完整 ETL 清洗流程（NULL 检查、去重、字段标准化、衍生字段）
-- 建立星型结构数据模型（`campaigns` → `ad_impressions` / `sessions` / `conversions`），并建立 5 组分析 SQL Views
-- 交付 3 页交互式 Power BI 仪表板，涵盖渠道绩效、CTR vs CVR 分析及活动 ROI 排名
-- 关键发现：Email Abandoned Cart 以每次获客成本 $2.27 达成 ROAS 45.12x；Google Display Remarketing 为唯一负 ROI 活动（ROAS 0.70x，-30%）
+- 使用 Python、pandas、NumPy 和 Faker，以 `seed=42` 生成可重现的仿真数据
+- 在 BigQuery 执行 ETL pipeline，包括 NULL 检查、去重、标准化及衍生字段建立
+- 建立 Star Schema 数据模型：`campaigns` → `ad_impressions` / `sessions` / `conversions`，并建立分析用 SQL views
+- 建立三页交互式 Power BI 仪表板，涵盖渠道表现、CTR 与 CVR 关系，以及 campaign ROI ranking
+- **主要成果：** Email Abandoned Cart 的 ROAS 为 45.12x、CPA 为 $2.27；Google Display Remarketing 则是唯一负 ROI 的 campaign，ROAS 为 0.70x、ROI 为 -30%
+
+> **作品集注记：** 本项目使用可重现的仿真数据，仅供学习及作品集展示用途；当中的指标及建议属示范性质。
 
 <div align="left">
   <a href="https://github.com/ross-bi/03_Traffic_Sources_Ad_ROI_Analysis/blob/main/README.zh-CN.md">
-    <img src="https://img.shields.io/badge/查看专案-03_Traffic_Sources_Ad_ROI_Analysis-blue?style=for-the-badge&logo=github" alt="Traffic Sources Ad ROI Analysis">
+    <img src="https://img.shields.io/badge/View_Project-03_Traffic_Sources_Ad_ROI_Analysis-blue?style=for-the-badge&logo=github" alt="Traffic Sources and Ad ROI Analysis">
   </a>
 </div>
 
 ---
 
 ### 4. 库存绩效分析
-**PostgreSQL · Power BI · Python · SQL**
+**PostgreSQL · Python · SQL · Power BI**
 
-使用 PwC × Kaggle 库存分析案例数据集（约 1,280 万笔销售交易、80 家门市），分析一家多门市酒类零售商 2016 年全年的库存绩效。
+使用 PwC × Kaggle Inventory Analysis Case Study dataset，分析一间多门市酒类零售商于 2016 全年的库存表现；资料涵盖约 1,280 万笔销售交易及 80 间门市。
 
-- 建立 Python 批次加载器（`psycopg2` + `COPY`），处理超出标准工具上限的 1,280 万笔销售档案
-- 执行三层 ELT 流程（raw → staging → marts），包含防御性型别转换与 7 节数据质量验证
-- 设计星型结构，包含 `dim_product`、`dim_store`、`dim_vendor`、`dim_date`、`fact_sales` 及 `fact_inventory_snapshot`
-- 在 PostgreSQL 以窗口函数实作静态 ABC 分类，避免 Power BI Import Mode 计算逾时
-- 计算 5 个库存 KPI：库存周转率（4.24x）、DSI（86 天）、缺货率（3.22%）、死库存率（2.56%）、再订购点
-- 交付 3 页交互式 Power BI 仪表板，涵盖管理层总览、库存风险分析及补货优先排序
+- 使用 `psycopg2` 和 `COPY` 建立 Python bulk loader，加载包含 1,280 万笔纪录的销售档案
+- 执行三层 ELT pipeline：raw → staging → marts，包含 defensive casting 及七部分数据质量验证
+- 设计 Star Schema，包括产品、门市、供货商和日期维度表，以及销售与库存快照事实表
+- 在 PostgreSQL 使用 window functions 实作 static ABC classification，以避免 Power BI Import Mode 的计算逾时问题
+- 计算 inventory turnover、DSI、stockout rate、dead-stock rate 及 reorder points
+- 建立三页交互式 Power BI 仪表板，涵盖管理层总览、库存风险及补货优先次序
+- **主要成果：** 发现库存价值按年上升 17.1%；Class C SKU 占产品目录 61.67%，但只带来 5% 营收，反映过量库存及营运资金风险
 
 <div align="left">
   <a href="https://github.com/ross-bi/04_Inventory_Performance_Analysis/blob/master/README.zh-CN.md">
-    <img src="https://img.shields.io/badge/查看专案-04_Inventory_Performance_Analysis-blue?style=for-the-badge&logo=github" alt="Inventory Performance Analysis">
+    <img src="https://img.shields.io/badge/View_Project-04_Inventory_Performance_Analysis-blue?style=for-the-badge&logo=github" alt="Inventory Performance Analysis">
   </a>
 </div>
 
 ---
 
-## 专业证书与专项课程
+## 精选证书
 
-| 证书名称 | 发证机构 | 验证链接 |
+| 证书 | 颁发机构 | 验证 |
 |---|---|---|
-| Microsoft Power BI Data Analyst Professional Certificate | Microsoft | <a href="https://coursera.org/verify/professional-cert/JZMXX254FKRO"><img src="https://img.shields.io/badge/验证-blue?style=for-the-badge&logoColor=white"></a> |
-| Google Business Intelligence Professional Certificate | Google | <a href="https://coursera.org/verify/professional-cert/P6RVCIH4QIRA"><img src="https://img.shields.io/badge/验证-blue?style=for-the-badge&logoColor=white"></a> |
-| IBM Generative AI for BI Analysts Specialization | IBM | <a href="https://coursera.org/verify/specialization/142IUDS1KXQV"><img src="https://img.shields.io/badge/验证-blue?style=for-the-badge&logoColor=white"></a> |
-| Google Data Analytics Professional Certificate | Google | <a href="https://coursera.org/verify/professional-cert/RB0NWMXRN2MQ"><img src="https://img.shields.io/badge/验证-blue?style=for-the-badge&logoColor=white"></a> |
-| IBM Data Analyst Professional Certificate | IBM | <a href="https://coursera.org/verify/professional-cert/2VW236K260MZ"><img src="https://img.shields.io/badge/验证-blue?style=for-the-badge&logoColor=white"></a> |
-
+| Microsoft Power BI Data Analyst Professional Certificate | Microsoft | [验证](https://coursera.org/verify/professional-cert/JZMXX254FKRO) |
+| Google Business Intelligence Professional Certificate | Google | [验证](https://coursera.org/verify/professional-cert/P6RVCIH4QIRA) |
+| IBM Generative AI for BI Analysts Specialization | IBM | [验证](https://coursera.org/verify/specialization/142IUDS1KXQV) |
+| Google Data Analytics Professional Certificate | Google | [验证](https://coursera.org/verify/professional-cert/RB0NWMXRN2MQ) |
+| IBM Data Analyst Professional Certificate | IBM | [验证](https://coursera.org/verify/professional-cert/2VW236K260MZ) |
 
 ---
 
-## 联系方式
+## 联络方式
 
-[![Notion](https://img.shields.io/badge/Notion-作品集-black?style=for-the-badge&logo=notion&logoColor=white)](https://www.notion.so/Chung-Man-Ross-Tang-2cc75a3c84e1807d8e6ec0bad9e0fa84?source=copy_link)
+[![Notion](https://img.shields.io/badge/Notion-Portfolio-black?style=for-the-badge&logo=notion&logoColor=white)](https://www.notion.so/Chung-Man-Ross-Tang-2cc75a3c84e1807d8e6ec0bad9e0fa84?source=copy_link)
 &nbsp;
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-联系我-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chung-man-tang-2a7616177)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chung-man-tang-2a7616177)
 
 ---
 
 ## 授权条款
 
-本项目采用 MIT License 授权。详见 [LICENSE](./LICENSE) 文件。
+本 repository 采用 [MIT License](./LICENSE) 授权。
